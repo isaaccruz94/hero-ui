@@ -1,0 +1,12 @@
+@import "fonts.css";
+:root{
+    --primary: #1B90FC;
+    --dark: #202020;
+    --light: #ffffff;
+    --secondary: #929292;
+    --fontbase: Roboto;
+    --fontsecundary: RobotoCondensed;
+    --fontText: 400 1.06rem / normal var(--fontbase); 
+    --fontTitle: 700 2.68rem / normal var(--fontsecundary);
+    --fontButton: 700 .90rem /normal var(--fontbase);
+}
