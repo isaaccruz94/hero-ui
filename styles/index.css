@@ -10,3 +10,127 @@
     --fontTitle: 700 2.68rem / normal var(--fontsecundary);
     --fontButton: 700 .90rem /normal var(--fontbase);
 }
+.body{
+    margin: 0;
+    padding: 0;
+}
+.cover{
+    inline-size: 100%;
+    block-size: 19rem;
+    background-image: url(/images/loki-background.webp);
+    background-size: cover;
+    background-position: center;
+    margin:0;
+}
+.main{
+    background-color: var(--dark);
+    inline-size: 100vw;
+    block-size: 100vh;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+.main-content{
+
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1.5rem;
+    color: var(--light);
+}
+.card-cover img{
+    margin-block: 0 1.5rem;
+    inline-size: 4.5rem;
+    block-size: 2rem;
+}
+.card-title{
+    margin-block: 0 .5rem;
+    font: var(--fontTitle);
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+.card-text{
+    margin-block: 0 1.5rem;
+    font: var(--fontText);
+    font-size: .85em;
+}
+.card-button{
+    background-color: var(--primary);
+    border: none;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+.card-button p{
+    color: var(--light);
+    font: var(--fontButton);
+    text-transform: uppercase;
+}
+@media screen and (min-width:768px) {
+    .cover{
+        block-size: 37.5rem;
+        margin-block-end: 2.5rem;
+    }
+    .card{
+        padding-inline: 4rem;
+    }
+    .card-cover img{
+        inline-size: 12rem;
+        block-size: 5rem;
+    }
+    .card-title{
+        font-size: 2.5rem;
+    }
+    .card-text{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width:1366px) {
+    .wrapper{
+        max-inline-size: 75rem;
+        margin-inline: auto;
+    }
+    .main-content{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        block-size: 100vh;
+    }
+    .cover{
+        background-image: none;
+    }
+    .main::before{
+        content: "";
+        background-color: var(--dark);
+        display: block;
+        inline-size: 50%;
+        block-size: 100%;
+        position: absolute;
+        clip-path: polygon(0 0, 90% 0,100% 100%, 0 100%);
+        z-index: 1;
+    }
+    .main{
+        background-image: url(/images/loki-background.webp);
+        background-position: center;
+        background-size: cover;
+    }
+    .main-content{
+        display: flex;
+
+    }
+    .card{
+        z-index: 2;
+        padding: 0;
+    }
+    .card-cover img{
+        inline-size: 9.5rem;
+        block-size: 4rem;
+    }
+    .card-button{
+        inline-size: 12rem;
+    }
+}
+@media screen and (min-width:1920px){
+    .wrapper{
+        max-inline-size: 105rem;
+    }
+}
